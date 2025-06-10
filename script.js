@@ -25,7 +25,9 @@ btns.forEach((btn) => {
 })
 
 resetBtn.addEventListener('click', function () {
-    
+    btns.forEach((btn) => {
+        btn.textContent = ""
+    })
 }) 
 
 let gameBoard = []
