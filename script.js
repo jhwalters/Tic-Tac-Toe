@@ -71,10 +71,16 @@ function initGame() {
 function handlePlayerMove() {
     if(checkWin(gameBoard, 'X')) {
         playerTurn.textContent = Player.player1 + " Wins"
+        btns.forEach((btn) => {
+            btn.disabled = true
+        })
         return
     }
     if(checkWin(gameBoard, 'O')) {
         playerTurn.textContent = Player.player2 + " Wins"
+        btns.forEach((btn) => {
+            btn.disabled = true
+        })
         return
     }
     if(!turn) {
